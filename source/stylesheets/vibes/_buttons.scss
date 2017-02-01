@@ -1,0 +1,187 @@
+/**
+* Default Button Colors
+*/
+
+%btn-default__base {
+  color:              $dark-secondary-trans;
+  background-color:   $dark-field-trans;
+}
+
+%btn-default__hover {
+  color:              $dark-primary-trans;
+  background-color:   lighten( $dark-field-trans, 30% );
+}
+
+%btn-default__active {
+  color:              $dark-primary-trans;
+  background-color:   darken( $dark-field, 40% );
+}
+
+%btn-default__disabled {
+  color:              $dark-field-trans;
+  background-color:   white;
+  box-shadow:         none !important;
+  border:             1px solid $dark-field-trans;
+  cursor:             default;
+}
+
+
+
+/**
+* Primary Button Colors
+*/
+
+%btn-primary__base {
+  color:              $light-secondary-trans;
+  background-color:   $primary-deep;
+}
+
+%btn-primary__hover {
+  color:              $light-primary;
+  background-color:   lighten( $primary-deep, 20% );
+}
+
+%btn-primary__active {
+  color:              $light-disabled-trans;
+  background-color:   darken( $primary-deep, 20% );
+}
+
+%btn-primary__disabled {
+  @extend %btn-default__disabled;
+}
+
+
+
+/**
+* Secondary Button Colors
+*/
+
+%btn-secondary__base {
+  color:              $light-primary-trans;
+  background-color:   $secondary-bright;
+}
+
+%btn-secondary__hover {
+  color:              $light-primary;
+  background-color:   lighten( $secondary-bright, 20% );
+}
+
+%btn-secondary__active {
+  color:              $light-disabled-trans;
+  background-color:   darken( $secondary-bright, 20% );
+}
+
+%btn-secondary__disabled {
+  @extend %btn-default__disabled;
+}
+
+
+
+/**
+* Button Sizes
+*/
+%btn-size__small {
+  @extend .label;
+
+  width:        auto;
+  padding:      4px 8px;        
+  box-shadow:   inset 0 -1px 0 $dark-layout-trans;
+}
+
+%btn-size__medium {
+  @extend .label-medium;
+
+  width:        auto;
+  padding:      8px 16px;
+  box-shadow:   inset 0 -2px 0 $dark-layout-trans;
+}
+
+%btn-size__large {
+  @extend .label-medium;
+
+  width:        auto;
+  padding:      12px 24px;
+  box-shadow:   inset 0 -3px 0 $dark-layout-trans;
+}
+
+
+
+
+button,
+input[type="submit"],
+input[type="button"]
+{
+
+  border: 0 none;
+  border-radius: 0;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+
+  margin: 0;
+
+  @include transition( background-color .16s linear );
+
+  &:hover:enabled,
+  &:active:enabled,
+  &.disabled
+  { box-shadow: none; }
+
+  &.disabled { cursor: default; }
+
+  // Set up default styles
+  &:hover:enabled   { @extend %btn-default__hover; }
+  &:active:enabled  { @extend %btn-default__active; }
+  &.disabled        { @extend %btn-default__disabled; }
+  &:disabled        { @extend %btn-default__disabled; }
+
+  @extend %btn-default__base;
+  @extend %btn-size__small;
+
+
+
+  /*
+  * Rankings
+  */
+
+  // Default
+  &.btn-default {
+    @extend %btn-default__base;
+
+    &:hover:enabled   { @extend %btn-default__hover; }
+    &:active:enabled  { @extend %btn-default__active; }
+    &.disabled        { @extend %btn-default__disabled; }
+    &:disabled        { @extend %btn-default__disabled; }
+  }
+
+  // Primary
+  &.btn-primary {
+    @extend %btn-primary__base;
+
+    &:hover:enabled   { @extend %btn-primary__hover; }
+    &:active:enabled  { @extend %btn-primary__active; }
+    &.disabled        { @extend %btn-primary__disabled; }
+    &:disabled        { @extend %btn-primary__disabled; }
+  }
+
+  // Secondary
+  &.btn-secondary {
+    @extend %btn-secondary__base;
+
+    &:hover:enabled   { @extend %btn-secondary__hover; }
+    &:active:enabled  { @extend %btn-secondary__active; }
+    &.disabled        { @extend %btn-secondary__disabled; }
+    &:disabled        { @extend %btn-secondary__disabled; }
+  }
+
+
+
+  /*
+  * Sizes
+  */
+  &.small         { @extend %btn-size__small; }
+  &.medium        { @extend %btn-size__medium; }
+  &.large         { @extend %btn-size__large; }
+ 
+}

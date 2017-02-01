@@ -1,0 +1,87 @@
+---
+title: Vibes Platform Styleguide
+---
+
+<div canvas="container">
+  <nav>
+    <button class="js-toggle-left-slidebar">Toggle left Slidebar</button>
+  </nav>
+
+  <div id="introduction" class="section">
+    <header>
+      <span class="label">Section 01</span>
+      <h2>
+        Platform
+        <br />
+        Styleguide
+      </h2>
+    </header>
+
+    <div class="content">
+      <p>As the Vibes platform continues to become an increasingly more robust, feature-rich application for mobile marketers, it has become a challenge to unify disparate product lines and functionality into a unified marketing software experience. The Vibes platform styleguide provides a single design language and reference point from which designers and developers can draw consistent elements. The styleguide will provide common elements and styles, as well as user experience patterns.</p>
+
+      <p>If you have any questions about the styleguide, please reach out to the Vibes Product Team.</p>
+    </div>
+  </div>
+
+
+  <div id="basic-form-elements" class="section">
+    <header>
+      <span class="label">Section 02</span>
+      <h2>
+        Basic Form
+        <br />
+        Elements
+      </h2>
+    </header>
+
+    <div class="content">
+      <h3>Inputs</h3>
+      <div id="input-1" class="input-container input-text">
+        <label for="input-1">
+          Input Label
+          <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+        </label>
+        <input type="text" id="input-1" name="input-1" placeholder="Placeholder" />
+        <div class="input-footer">
+          <span class="input-info text-small"></span> 
+          <span class="tags-link">Tags &amp; Content</span>
+        </div>
+      </div>
+
+      <div id="input-2" class="input-container input-textarea">
+        <label for="input-1">
+          Input Label
+          <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+        </label>
+        <textarea id="input-2" name="input-2" rows="4" placeholder="Enter your message here"></textarea>
+        <div class="input-footer">
+          <span class="input-info text-small"></span> 
+          <span class="tags-link">Tags &amp; Content</span>
+        </div>
+      </div>
+
+      <h3>Buttons</h3>
+      <button class="btn-primary">Button</button>
+      <button class="btn-primary medium">Button</button>
+      <button class="btn-primary large">Button</button>
+      <button class="btn-primary large" disabled>Button</button>
+      <button class="btn-secondary">Button</button>
+      <button class="btn-secondary medium">Button</button>
+      <button class="btn-secondary large">Button</button>
+      <button class="btn-secondary large" disabled>Button</button>
+      <button>Button</button>
+      <button class="medium">Button</button>
+      <button class="large">Button</button>
+      <button class="large" disabled>Button</button>
+
+    </div>
+  </div>
+
+</div>
+
+<div off-canvas="slidebar-1 left reveal">
+  <nav>
+
+  </nav>
+</div>

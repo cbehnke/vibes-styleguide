@@ -1,0 +1,98 @@
+/* ------------------------------------------------------------------------ *
+ * Greys
+ * ------------------------------------------------------------------------ */
+
+/**
+* Dark on Light
+*/
+
+// 3% Opacity
+$dark-field:              rgb( 247,247,247);  // hex: #f7f7f7
+$dark-field-trans:        rgba( 0,0,0,.1 );
+
+// 12% Opacity
+$dark-layout:             rgb( 224,224,224 ); // hex: #e0e0e0
+$dark-layout-trans:       rgba( 0,0,0,.1 );
+
+// 28% Opacity
+$dark-disabled:           rgb( 183,183,183 ); // hex: #b7b7b7
+$dark-disabled-trans:     rgba( 0,0,0,.3 );
+
+// 46% Opacity
+$dark-secondary:          rgb( 117,117,117 ); // hex: #757575
+$dark-secondary-trans:    rgba( 0,0,0,.5 );
+
+// 87% Opacity
+$dark-primary:            rgb( 33,33,33 );    // hex: #212121
+$dark-primary-trans:      rgba( 0,0,0,.9 );
+
+// 100% Opacity
+$dark-full:               rgb( 0,0,0 );       // hex: #000000
+$dark-full-trans:         rgba( 0,0,0,1 );
+
+
+
+/**
+* Light on Dark
+*/
+
+// 7% Opacity
+$light-field:             rgb( 18,18,18 );    // hex: #121212
+$light-field-trans:       rgba( 255,255,255,.1 );
+
+// 18% Opacity
+$light-layout:            rgb( 51,51,51 );    // hex: #333
+$light-layout-trans:      rgba( 255,255,255,.18 );
+
+// 36% Opacity
+$light-disabled:          rgb( 102,102,102 ); // hex: #666
+$light-disabled-trans:    rgba( 255,255,255,.36 );
+
+// 60% Opacity
+$light-secondary:         rgb( 153,153,153 ); // hex: #999
+$light-secondary-trans:   rgba( 255,255,255,.6 );
+
+// 90% Opacity
+$light-primary:           rgb( 255,255,255 ); // hex: #fff
+$light-primary-trans:     rgba( 255,255,255,.9 );
+
+// 100% Opacity
+$light-full:              rgb( 255,255,255 ); // hex: #fff
+$light-full-trans:        rgba( 255,255,255,1 );
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Colors
+ * ------------------------------------------------------------------------ */
+
+/**
+* Primary
+*/
+
+$primary-bright:    rgb( 85,199,225 ); // hex: #55c7e1
+$primary-deep:      rgb( 36,122,214 ); // hex: #247ad6
+
+
+
+/**
+* Secondary
+*/
+
+$secondary-bright:  rgb( 36,214,131 );  // hex: #24d683
+$secondary-deep:    rgb( 34,199,106 );  // hex: #22c76a
+
+
+
+/**
+* Application Colors
+*/
+
+$cat-broadcast:       rgb( 255,155,0 );   // hex: #ff9b00
+$cat-triggered:       rgb( 170,79,216 );  // hex: #aa4fd8
+$cat-wallet:          rgb( 159,239,0 );   // hex: #9fef00
+$cat-interactive:     rgb( 255,221,0 );   // hex: #ffdd00
+$cat-onscreen:        rgb( 255,80,158 );  // hex: #ff509e
+
+$error: rgb( 225,123,93 );

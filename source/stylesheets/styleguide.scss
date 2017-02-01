@@ -1,0 +1,319 @@
+body { background: $dark-field; }
+div[canvas="container"] { width: 720px; }
+.section > .content { padding: 72px; }
+
+$inputContainer: 336px;
+
+body { background: $dark-layout; }
+svg { fill: $secondary-bright; }
+
+main {
+  width: 66%;
+  margin: 60px auto;
+  padding: 48px;
+  background: white;
+}
+
+
+
+/**
+* Common Input Elements
+*/
+
+.input-container {
+width: $inputContainer;
+margin: 2rem 0;
+
+// Label
+>label { padding: 0.5rem; }
+
+// Footer Elements
+>.input-footer {
+  @include clearfix;
+  padding: 0.5rem;
+
+  >.input-info,
+  >.tags-link
+  { width: 45%; }
+}
+
+.input-footer > .input-info { float: left; width: 45%; }
+.input-footer > .tags-link  { float: right; width: 45%; }
+
+.input-info {
+  float: left;
+  font-style: italic;
+}
+
+.tags-link {
+  @extend .label;
+  float: right;
+  text-align: right;
+  font-weight: 600;
+  color: $primary-deep;
+  cursor: pointer;
+}
+
+} // .input-container
+
+
+
+/**
+* Text Input
+*/
+
+.input-container.input-text {
+
+input[type="text"] {
+  @extend .text-medium;
+
+  width: 100%;
+
+
+  border: 0.5px solid rgba(0,0,0,0);
+  border-bottom-color: $dark-layout;
+  outline: none;  
+
+  padding: 0.5rem;
+
+  &:focus { border-bottom-color: $secondary-bright; border-bottom-width: 3px; }
+  @include placeholder { color: $dark-disabled; }
+  @include transition( border-width .1s linear );
+}
+} // Text Input
+
+
+
+/**
+* Textarea
+*/
+
+.input-container.input-textarea {
+
+textarea {
+  @extend .text-medium;
+
+  width: 100%;
+
+  border: 0.5px solid rgba(0,0,0,0);
+  border-bottom-color: $dark-layout;
+  outline: none;
+
+  padding: 0.5rem;
+
+  resize: none;
+  
+  &:focus {
+    border-style: solid;
+
+    border-color: $dark-layout;
+    border-width: 0.5px;
+
+    border-bottom-color: $secondary-bright;
+    border-bottom-width: 3px;
+  }
+
+  @include placeholder { color: $dark-disabled; }
+  @include transition( border-width .1s linear );
+}
+} // Textarea
+
+
+/**
+* Error State
+*/
+.input-container.error {
+  input[type="text"],
+  textarea
+  { 
+    border-bottom-color: $error;
+    @include placeholder { color: transparent; }
+  }
+
+  >label { color: $error; }
+  >label > span > svg { fill: $error; }
+
+
+  .input-info,.tags-link { display: none; }
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Site Layout
+ * ------------------------------------------------------------------------ */
+
+body { background-color: $dark-field; }
+section#scroller { background-color: white; }
+
+a,
+a:link,
+a:hover,
+a:visited {
+  color: black;
+}
+
+
+
+/**
+* Side Drawer Navigation
+*/
+
+nav.navigation { background: white; border-right: 1px solid $dark-layout; }
+nav.navigation ul { list-style: none; margin: 0; padding: 0; /* border-top: 1px solid $dark-layout; */ }
+nav.navigation ul li {
+  @extend .label;
+  text-align: left;
+
+  >a { 
+    display: block;
+    text-decoration: none;
+    padding: 16px 24px;
+
+    &:hover { background: $dark-field; }
+  }
+
+  &.selected {
+    border-left: 5px solid $secondary-bright;
+    >a { color: $secondary-bright; }
+  }
+}
+
+
+
+
+/**
+* Primary Header
+*/
+
+header.primary { 
+  background-color: white;
+  border-bottom: 1px solid $dark-layout;
+
+
+  span.icon {
+    // Include hamburger on smaller screens
+    @include max-screen(768px) {
+      color: #fff;
+      background-color: #000;
+      line-height: 49px;
+
+      padding: 0 20px;
+    }
+  }
+
+  hgroup {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    // Add padding for hamburger menu
+    @include max-screen(768px) { margin-left: 50px; }
+
+
+    svg { 
+      display: inline-block;      
+
+      width:    60px;
+      height:   49px;
+
+      margin: 0 16px;
+
+      // Change logo size for different displays
+      @include max-screen(768px) { width: 40px; }
+    }
+
+    span.text-small { 
+      display: inline-block;
+      vertical-align: top;
+      line-height: 49px;
+
+      color: $dark-secondary;
+
+      margin:   0;
+      padding:  0;
+    }
+
+    @include max-screen(768px) { height: inherit; }
+  }
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Section Styles
+ * ------------------------------------------------------------------------ */
+
+// Header
+div.section > header {
+  background-color: $secondary-deep;
+  background-image: image-url( 'fractal-pattern.png' );
+  background-repeat: repeat;
+  background-size: 30%;
+
+  padding: 48px 72px 40px; 
+
+
+  span { font-weight: bold; color: $light-secondary-trans; margin-bottom: 1.6rem; }
+  h2 { color: $light-primary; text-transform: uppercase; margin: 0; }
+}
+
+@include max-screen(768px) { div.section > header { padding: 48px 40px; } }
+
+
+// Content
+@include max-screen(768px) {  div.content { margin: 40px; } }
+
+h3 { color: $secondary-bright; }
+
+.inline {
+  background: $dark-field;
+  color: $secondary-bright;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.boxes { margin: 24px 0 64px; }
+.box {
+  border: 1px solid $dark-layout;
+  border-top: 0;
+  padding: 20px;
+
+  &:first-child { border-top: 1px solid $dark-layout; }
+
+  &.code { 
+    background-color: $dark-field;
+
+    >p { color: $dark-secondary; }
+  }
+
+  .caption {
+    @extend .text-small;
+
+    display: block;
+    color: $dark-disabled;
+    font-style: italic;
+    @include rem( letter-spacing, 0.16rem );
+    @include rem( margin-top, 1rem );
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Media Queries
+ * ------------------------------------------------------------------------ */
+
+@media only screen and ( min-width: 768px ) {
+  
+  section#scroller { width: 768px; }
+
+  header.primary hgroup { text-align: left; }
+  header.primary hgroup h1 { position: relative; left: 0; right: auto; font-size: 30px; line-height: 34px; }
+}
