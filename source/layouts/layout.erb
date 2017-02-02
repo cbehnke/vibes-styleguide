@@ -10,9 +10,27 @@
     <%= stylesheet_link_tag :application %>
   </head>
 
-
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div canvas="container">
+      <nav>
+        <button class="js-toggle-left-slidebar">Toggle left Slidebar</button>
+      </nav>
+
+      <div class="scroller">
+        <%= yield %>
+      </div>
+
+    </div>
+
+    <div off-canvas="slidebar-1 left reveal">
+      <nav>
+        <% for resource in sitemap.resources %>
+          <% if resource.ext == '.html' && resource.path != 'index.html' %>
+            <li><%= link_to resource.data.title, "/#{resource.destination_path}" %></li>
+          <% end %>
+        <% end %>
+      </nav>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <%= javascript_include_tag :application %>

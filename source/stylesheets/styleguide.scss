@@ -1,6 +1,6 @@
 body { background: $dark-field; }
 div[canvas="container"] { width: 720px; }
-.section > .content { padding: 72px; }
+div.page > .content { padding: 72px; }
 
 $inputContainer: 336px;
 
@@ -250,7 +250,7 @@ header.primary {
  * ------------------------------------------------------------------------ */
 
 // Header
-div.section > header {
+div.page > header {
   background-color: $secondary-deep;
   background-image: image-url( 'fractal-pattern.png' );
   background-repeat: repeat;

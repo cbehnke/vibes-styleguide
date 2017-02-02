@@ -17,6 +17,9 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
+redirect "index.html", to: "introduction.html"
+
+config[:trailing_slash] = false
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -38,6 +41,7 @@ end
 
 # Build-specific configuration
 configure :build do
+  activate :directory_indexes
   # Minify CSS on build
   # activate :minify_css
 
