@@ -142,3 +142,93 @@ ul.selector.menu {}
     border-color: $dark-secondary;
   }
 }
+
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Slats
+ * ------------------------------------------------------------------------ */
+
+/**
+*
+* HTML:
+* .slats
+*   header [optional]
+*     header content
+*   .slat
+*     .icon-left [optional]
+*     title
+*     ul.secondary [optional]
+*       li secondary information
+*     .icon-right [optional]
+*/
+
+.slat {
+  width: 100%;
+  display: block;
+  @extend .paragraph;
+  cursor: pointer;
+  border-bottom: 1px solid $dark-layout;
+  margin:   0;
+  padding:  1rem;
+
+  &:nth-child(odd) { background: $dark-field; }
+
+  >a { color: $dark-primary; padding-left: 0.5rem; }
+  >a:hover { text-decoration: none; }
+
+  span.icon-right { margin: 0.3rem; }
+
+  &:hover { background: $dark-field; }
+}
+
+// Secondary Content
+.slat > ul.secondary {
+  li { @extend .text-small; color: $dark-disabled; }
+}
+
+// Header
+.slats > header {
+  position: relative;
+  background: $dark-field;
+  border-bottom: 1px solid $dark-layout;
+
+  margin:   0;
+  padding:  0.5rem 1.5rem;
+
+  &.icon-only { padding: 1.25rem 1.5rem; }
+  >h4 { margin: 0; }
+  >a { @extend .label; color: $dark-primary; }
+
+  .icon-right {
+    position:   absolute;
+    top:        0.5rem;
+    right:      1.5rem;
+  }
+
+  .icon-left {
+    position:   absolute;
+    top:        0.5rem;
+    left:       1.5rem;
+  }
+}
+
+// Search
+.slat.-search {
+  background: white;
+  box-shadow: 0 0 3px 0 $dark-layout-trans;
+
+  >input {
+    width: 100%;
+    @extend .paragraph;
+    line-height: 2.4rem;
+    color: $dark-primary;
+    outline: none;
+    border: none;
+    border-bottom:1px solid $dark-layout;
+  }
+
+  >input::placeholder { color: $dark-disabled; }
+}

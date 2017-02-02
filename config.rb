@@ -48,3 +48,12 @@ configure :build do
   # Minify Javascript on build
   # activate :minify_javascript
 end
+
+
+helpers do
+  def check_current_path(path)
+    if path == current_page.path
+      return "active"
+    end
+  end
+end

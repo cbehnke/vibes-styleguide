@@ -1,26 +1,14 @@
 ---
-id: 3
-title: "Components List"
-title_1: "Components"
-title_2: "List"
+id: 4
+title: "Components"
+heading_1: "Components"
+heading_2: "List"
 sections:
   - buttons
   - basic_form_elements
 ---
 
-<div id="components" class="page">
-  <header>
-    <span class="label">Section <%= current_page.data.id %></span>
-    <h2>
-      <%= current_page.data.title_1 %>
-      <br />
-      <%= current_page.data.title_2 %>
-    </h2>
-  </header>
-
-  <div class="content">
-    <% current_page.data.sections.each do |section| %>
-      <%= partial "partials/pages/components/#{section}" %>
-    <% end %>
-  </div>
+<div id="<%= current_page.data.title.parameterize({separator: '_' }) %>" class="page">
+  <%= partial('partials/header',  locals: { page: current_page }) %>
+  <%= partial('partials/content', locals: { page: current_page }) %>
 </div>

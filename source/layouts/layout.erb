@@ -1,32 +1,28 @@
 <!doctype html>
 <html>
   <head>
+    <title><%= current_page.data.title || "Vibes Platform Styleguide" %></title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title><%= current_page.data.title || "Vibes Platform Styleguide" %></title>
-
     <%= stylesheet_link_tag :application %>
   </head>
 
   <body class="<%= page_classes %>">
     <div canvas="container">
-      <nav>
-        <button class="js-toggle-left-slidebar">Toggle left Slidebar</button>
+      <nav id="top-nav">
+        <button class="js-toggle-left-slidebar"><%= partial "images/svg/icon_menu.svg" %></button>
       </nav>
-
       <div class="scroller">
         <%= yield %>
       </div>
-
     </div>
 
     <div off-canvas="slidebar-1 left reveal">
-      <nav>
-        <% for resource in sitemap.resources %>
+      <nav class="slats">
+        <% for resource in sitemap.resources.sort_by {|resource| resource.data.id.to_i   } %>
           <% if resource.ext == '.html' && resource.path != 'index.html' %>
-            <li><%= link_to resource.data.title, "/#{resource.destination_path}" %></li>
+            <li class='slat <%= check_current_path(resource.path) %>'><%= link_to resource.data.title, "/#{resource.destination_path}" %></li>
           <% end %>
         <% end %>
       </nav>

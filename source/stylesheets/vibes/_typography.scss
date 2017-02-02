@@ -37,7 +37,7 @@ h4 {
 
 
 // Body Copy
-p {
+p,.paragraph {
   @include rem( font-size, 1.3rem );
   @include rem( line-height, 3.2rem );
   @include rem( letter-spacing, 0.03rem );

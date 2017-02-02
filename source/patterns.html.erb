@@ -1,3 +1,12 @@
 ---
-title: Patterns
+id: 5
+title: "Patterns"
+heading_1: "Pattern"
+heading_2: "Library"
+sections:
 ---
+
+<div id="<%= current_page.data.title.parameterize({separator: '_' }) %>" class="page">
+  <%= partial('partials/header',  locals: { page: current_page }) %>
+  <%= partial('partials/content', locals: { page: current_page }) %>
+</div>

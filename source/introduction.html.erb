@@ -1,20 +1,13 @@
 ---
-title: Introduction
+id: 1
+title: "Introduction"
+heading_1: "Platform"
+heading_2: "Styleguide"
+sections:
+  - introduction
 ---
 
-<div id="introduction" class="page">
-  <header>
-    <span class="label">Section 01</span>
-    <h2>
-      Platform
-      <br />
-      Styleguide
-    </h2>
-  </header>
-
-  <div class="content">
-    <p>As the Vibes platform continues to become an increasingly more robust, feature-rich application for mobile marketers, it has become a challenge to unify disparate product lines and functionality into a unified marketing software experience. The Vibes platform styleguide provides a single design language and reference point from which designers and developers can draw consistent elements. The styleguide will provide common elements and styles, as well as user experience patterns.</p>
-
-    <p>If you have any questions about the styleguide, please reach out to the Vibes Product Team.</p>
-  </div>
+<div id="<%= current_page.data.title.parameterize({separator: '_' }) %>" class="page">
+  <%= partial('partials/header',  locals: { page: current_page }) %>
+  <%= partial('partials/content', locals: { page: current_page }) %>
 </div>

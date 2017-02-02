@@ -1,3 +1,12 @@
 ---
-title: Building Blocks
+id: 3
+title: "Building Blocks"
+heading_1: "Building"
+heading_2: "Blocks"
+sections:
 ---
+
+<div id="<%= current_page.data.title.parameterize({separator: '_' }) %>" class="page">
+  <%= partial('partials/header',  locals: { page: current_page }) %>
+  <%= partial('partials/content', locals: { page: current_page }) %>
+</div>
