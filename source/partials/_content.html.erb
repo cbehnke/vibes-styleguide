@@ -1,0 +1,7 @@
+<div class="content">
+  <% if current_page.data.sections %>
+    <% current_page.data.sections.each do |section| %>
+      <%= partial "partials/pages/#{current_page.data.title.parameterize({separator: "_"})}/#{section}" %>
+    <% end %>
+  <% end %>
+</div>
