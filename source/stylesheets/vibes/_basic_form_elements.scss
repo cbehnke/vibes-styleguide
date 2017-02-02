@@ -1,0 +1,120 @@
+/**
+* Common Input Elements
+*/
+
+.input-container {
+width: $inputContainer;
+margin: 2rem 0;
+
+// Label
+>label { padding: 0.5rem; }
+
+// Footer Elements
+>.input-footer {
+  @include clearfix;
+  padding: 0.5rem;
+
+  >.input-info,
+  >.tags-link
+  { width: 45%; }
+}
+
+.input-footer > .input-info { float: left; width: 45%; }
+.input-footer > .tags-link  { float: right; width: 45%; }
+
+.input-info {
+  float: left;
+  font-style: italic;
+}
+
+.tags-link {
+  @extend .label;
+  float: right;
+  text-align: right;
+  font-weight: 600;
+  color: $primary-deep;
+  cursor: pointer;
+}
+
+} // .input-container
+
+
+
+/**
+* Text Input
+*/
+
+.input-container.input-text {
+
+input[type="text"] {
+  @extend .text-medium;
+
+  width: 100%;
+
+
+  border: 0.5px solid rgba(0,0,0,0);
+  border-bottom-color: $dark-layout;
+  outline: none;  
+
+  padding: 0.5rem;
+
+  &:focus { border-bottom-color: $secondary-bright; border-bottom-width: 3px; }
+  @include placeholder { color: $dark-disabled; }
+  @include transition( border-width .1s linear );
+}
+} // Text Input
+
+
+
+/**
+* Textarea
+*/
+
+.input-container.input-textarea {
+
+textarea {
+  @extend .text-medium;
+
+  width: 100%;
+
+  border: 0.5px solid rgba(0,0,0,0);
+  border-bottom-color: $dark-layout;
+  outline: none;
+
+  padding: 0.5rem;
+
+  resize: none;
+  
+  &:focus {
+    border-style: solid;
+
+    border-color: $dark-layout;
+    border-width: 0.5px;
+
+    border-bottom-color: $secondary-bright;
+    border-bottom-width: 3px;
+  }
+
+  @include placeholder { color: $dark-disabled; }
+  @include transition( border-width .1s linear );
+}
+} // Textarea
+
+
+/**
+* Error State
+*/
+.input-container.error {
+  input[type="text"],
+  textarea
+  { 
+    border-bottom-color: $error;
+    @include placeholder { color: transparent; }
+  }
+
+  >label { color: $error; }
+  >label > span > svg { fill: $error; }
+
+
+  .input-info,.tags-link { display: none; }
+}

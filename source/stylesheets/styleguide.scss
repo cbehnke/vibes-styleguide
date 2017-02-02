@@ -4,7 +4,8 @@ div.page > .content { padding: 72px; }
 
 $inputContainer: 336px;
 
-body { background: $dark-layout; }
+body { background-color: $dark-field; }
+section#scroller { background-color: white; }
 svg { fill: $secondary-bright; }
 
 main {
@@ -14,141 +15,24 @@ main {
   background: white;
 }
 
-nav#top-nav { padding: 0.8rem; }
+nav#top-nav { height: 64px; }
+nav#top-nav > button,
+nav#top-nav > a
+{ display: inline-block; margin: 0; }
 
-
-
-/**
-* Common Input Elements
-*/
-
-.input-container {
-width: $inputContainer;
-margin: 2rem 0;
-
-// Label
->label { padding: 0.5rem; }
-
-// Footer Elements
->.input-footer {
-  @include clearfix;
-  padding: 0.5rem;
-
-  >.input-info,
-  >.tags-link
-  { width: 45%; }
+nav#top-nav > button {
+  margin: 1.8rem;
 }
 
-.input-footer > .input-info { float: left; width: 45%; }
-.input-footer > .tags-link  { float: right; width: 45%; }
-
-.input-info {
-  float: left;
-  font-style: italic;
+a#logo,
+a#logo > svg 
+{
+  display:  block;
+  width:    64px;
+  height:   32px;
+  margin: 1rem;
 }
 
-.tags-link {
-  @extend .label;
-  float: right;
-  text-align: right;
-  font-weight: 600;
-  color: $primary-deep;
-  cursor: pointer;
-}
-
-} // .input-container
-
-
-
-/**
-* Text Input
-*/
-
-.input-container.input-text {
-
-input[type="text"] {
-  @extend .text-medium;
-
-  width: 100%;
-
-
-  border: 0.5px solid rgba(0,0,0,0);
-  border-bottom-color: $dark-layout;
-  outline: none;  
-
-  padding: 0.5rem;
-
-  &:focus { border-bottom-color: $secondary-bright; border-bottom-width: 3px; }
-  @include placeholder { color: $dark-disabled; }
-  @include transition( border-width .1s linear );
-}
-} // Text Input
-
-
-
-/**
-* Textarea
-*/
-
-.input-container.input-textarea {
-
-textarea {
-  @extend .text-medium;
-
-  width: 100%;
-
-  border: 0.5px solid rgba(0,0,0,0);
-  border-bottom-color: $dark-layout;
-  outline: none;
-
-  padding: 0.5rem;
-
-  resize: none;
-  
-  &:focus {
-    border-style: solid;
-
-    border-color: $dark-layout;
-    border-width: 0.5px;
-
-    border-bottom-color: $secondary-bright;
-    border-bottom-width: 3px;
-  }
-
-  @include placeholder { color: $dark-disabled; }
-  @include transition( border-width .1s linear );
-}
-} // Textarea
-
-
-/**
-* Error State
-*/
-.input-container.error {
-  input[type="text"],
-  textarea
-  { 
-    border-bottom-color: $error;
-    @include placeholder { color: transparent; }
-  }
-
-  >label { color: $error; }
-  >label > span > svg { fill: $error; }
-
-
-  .input-info,.tags-link { display: none; }
-}
-
-
-
-
-
-/* ------------------------------------------------------------------------ *
- * Site Layout
- * ------------------------------------------------------------------------ */
-
-body { background-color: $dark-field; }
-section#scroller { background-color: white; }
 
 a,
 a:link,
@@ -156,93 +40,6 @@ a:hover,
 a:visited {
   color: black;
 }
-
-
-
-/**
-* Side Drawer Navigation
-*/
-
-nav.navigation { background: white; border-right: 1px solid $dark-layout; }
-nav.navigation ul { list-style: none; margin: 0; padding: 0; /* border-top: 1px solid $dark-layout; */ }
-nav.navigation ul li {
-  @extend .label;
-  text-align: left;
-
-  >a { 
-    display: block;
-    text-decoration: none;
-    padding: 16px 24px;
-
-    &:hover { background: $dark-field; }
-  }
-
-  &.selected {
-    border-left: 5px solid $secondary-bright;
-    >a { color: $secondary-bright; }
-  }
-}
-
-
-
-
-/**
-* Primary Header
-*/
-
-header.primary { 
-  background-color: white;
-  border-bottom: 1px solid $dark-layout;
-
-
-  span.icon {
-    // Include hamburger on smaller screens
-    @include max-screen(768px) {
-      color: #fff;
-      background-color: #000;
-      line-height: 49px;
-
-      padding: 0 20px;
-    }
-  }
-
-  hgroup {
-    display: inline-block;
-
-    margin: 0;
-    padding: 0;
-
-    // Add padding for hamburger menu
-    @include max-screen(768px) { margin-left: 50px; }
-
-
-    svg { 
-      display: inline-block;      
-
-      width:    60px;
-      height:   49px;
-
-      margin: 0 16px;
-
-      // Change logo size for different displays
-      @include max-screen(768px) { width: 40px; }
-    }
-
-    span.text-small { 
-      display: inline-block;
-      vertical-align: top;
-      line-height: 49px;
-
-      color: $dark-secondary;
-
-      margin:   0;
-      padding:  0;
-    }
-
-    @include max-screen(768px) { height: inherit; }
-  }
-}
-
 
 
 
@@ -283,7 +80,6 @@ h3 { color: $secondary-bright; }
 .boxes { margin: 24px 0 64px; }
 .box {
   border: 1px solid $dark-layout;
-  border-top: 0;
   padding: 20px;
 
   &:first-child { border-top: 1px solid $dark-layout; }

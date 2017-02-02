@@ -1,3 +1,5 @@
+$inputContainer: 330px;
+
 @charset "utf-8";
 
 // Reset
@@ -16,6 +18,7 @@
 @import "vibes/typography";
 @import "vibes/colors";
 @import "vibes/buttons";
+@import "vibes/basic_form_elements";
 @import "vibes/components";
 
 // Master Stylesheet
