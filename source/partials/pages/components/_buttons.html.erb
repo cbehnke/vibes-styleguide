@@ -1,4 +1,6 @@
 <section id="buttons">
+  <h2>Buttons</h2>
+
   <h3>Button Sizes</h3>
   <p>There are three main button sizes available: small, medium, and large. They are defined by <span class="code">.btn-small</span>, <span class="code">.btn-med</span>, and <span class="code">.btn-large</span>. Large buttons should be used for form and page confirmations and saving, while the small and medium buttons should be utilized for inline functions within the UI.</p>
 
@@ -27,4 +29,19 @@
     <div class="col"><button class="medium" disabled>Button</button></div>
   </div>
   <span class="caption">disabled button</span>
+
+  <h3>Button + Icon</h3>
+  <p>Buttons with icons are created by adding an <span class="code">i</span> tag to the HTML of the button with the class name of <span class="code">.icon-[icon name]</span>, where [icon name] is the ID of the icon to be inserted.</p>
+
+  <div class="box">
+    <div class="col"><button class="medium"><i class="icon-menu"></i>Menu</button></div>
+  </div>
+  <span class="caption">button with icon</span>
+
+  <p>Add the class of <span class="code">.icon-only</span> to the button and use only the <span class="code">i</span> tag within the its HTML to create an icon-only button.
+  <div class="box">
+    <div class="col"><button class="medium icon-only"><i class="icon-menu"></i></button></div>
+  </div>
+  <span class="caption">icon-only button</span>
+
 </section>

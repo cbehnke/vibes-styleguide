@@ -183,5 +183,13 @@ input[type="button"]
   &.small         { @extend %btn-size__small; }
   &.medium        { @extend %btn-size__medium; }
   &.large         { @extend %btn-size__large; }
+
+
+  /*
+  * Icon
+  */
+  > i { margin-right: 1rem; }
+  > i > svg { width: 12px; height: 12px; }
+  &.icon-only > i { margin-right: 0; }
  
 }
