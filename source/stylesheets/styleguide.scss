@@ -20,9 +20,7 @@ nav#top-nav > button,
 nav#top-nav > a
 { display: inline-block; margin: 0; }
 
-nav#top-nav > button {
-  margin: 1.8rem;
-}
+nav#top-nav > button { margin: 1.8rem; }
 
 a#logo,
 a#logo > svg 
@@ -30,16 +28,15 @@ a#logo > svg
   display:  block;
   width:    64px;
   height:   32px;
-  margin: 1rem;
+  margin:   1rem;
 }
-
 
 a,
 a:link,
 a:hover,
-a:visited {
-  color: black;
-}
+a:visited 
+{ color: black; }
+
 
 
 
@@ -70,35 +67,36 @@ div.page > header {
 
 h3 { color: $secondary-bright; }
 
-.inline {
+p > span.code {
+  color: $secondary-deep;
   background: $dark-field;
-  color: $secondary-bright;
-  border-radius: 2px;
-  padding: 4px;
+
+  @include rem( padding, .2rem );
 }
 
-.boxes { margin: 24px 0 64px; }
 .box {
+  display: flex;
+  align-items: center;
   border: 1px solid $dark-layout;
   padding: 20px;
 
-  &:first-child { border-top: 1px solid $dark-layout; }
-
-  &.code { 
-    background-color: $dark-field;
-
-    >p { color: $dark-secondary; }
+  >.col {
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
+}
 
-  .caption {
-    @extend .text-small;
+.caption {
+  @extend .text-small;
 
-    display: block;
-    color: $dark-disabled;
-    font-style: italic;
-    @include rem( letter-spacing, 0.16rem );
-    @include rem( margin-top, 1rem );
-  }
+  display: block;
+  text-align: right;
+  color: $dark-disabled;
+  font-style: italic;
+
+  @include rem( letter-spacing, 0.16rem );
+  @include rem( margin, .5rem .5rem 6rem 0 );
 }
 
 

@@ -1,15 +1,30 @@
 <section id="buttons">
-  <h3>Buttons</h3>
-  <button class="btn-primary">Button</button>
-  <button class="btn-primary medium">Button</button>
-  <button class="btn-primary large">Button</button>
-  <button class="btn-primary large" disabled>Button</button>
-  <button class="btn-secondary">Button</button>
-  <button class="btn-secondary medium">Button</button>
-  <button class="btn-secondary large">Button</button>
-  <button class="btn-secondary large" disabled>Button</button>
-  <button>Button</button>
-  <button class="medium">Button</button>
-  <button class="large">Button</button>
-  <button class="large" disabled>Button</button>
+  <h3>Button Sizes</h3>
+  <p>There are three main button sizes available: small, medium, and large. They are defined by <span class="code">.btn-small</span>, <span class="code">.btn-med</span>, and <span class="code">.btn-large</span>. Large buttons should be used for form and page confirmations and saving, while the small and medium buttons should be utilized for inline functions within the UI.</p>
+
+  <div class="box">
+    <div class="col"><button>Button</button></div>
+    <div class="col"><button class="medium">Button</button></div>
+    <div class="col"><button class="large">Button</button></div>
+  </div> 
+  <span class="caption">button size options</span>
+
+  <h3>Colored Buttons</h3>
+  <p>There are three available colors for buttons, and should be used based on context. Blue buttons should be used for confirmation and saving. Green buttons should be used for secondary in-UI functions, and grey for inline functions. Buttons are colored by adding a class of <span class="code">.btn—[color]</span>.</p>
+
+  <div class="box">
+    <div class="col"><button class="medium">Button</button></div>
+    <div class="col"><button class="btn-primary medium">Button</button></div>
+    <div class="col"><button class="btn-secondary medium">Button</button></div>
+  </div>
+  <span class="caption">button color options</span>
+
+
+  <h3>Disabled Button</h3>
+  <p>Disabled buttons are lightened to indicate their state. Use the “disabled” HTML5 attribute or the <span class="code">.disabled</span> class to activate this style. The disabled state looks the same for all button colors.</p>
+
+  <div class="box">
+    <div class="col"><button class="medium" disabled>Button</button></div>
+  </div>
+  <span class="caption">disabled button</span>
 </section>
