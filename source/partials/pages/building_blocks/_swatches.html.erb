@@ -1,0 +1,12 @@
+<div class="boxes">
+  <% data.colors[id].each do |color| %>
+    <div class="box two-up">
+      <span class="swatch" style="background-color: <%= color.hex %>"></span>
+      <span class="caption">
+        <%= color.hex %>
+        &#9671;
+        <%= color.rgba %>
+      </span>
+    </div>
+  <% end %>
+</div>

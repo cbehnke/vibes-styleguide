@@ -1,0 +1,111 @@
+greyscale_light:
+- label:  "dark_field"
+  hex:    "#f7f7f7"
+  rgba:   "rgba(0,0,0,.1)"
+
+- label:  "dark_layout"
+  hex:    "#e0e0e0"
+  rgba:   "rgba(0,0,0,.2)"
+
+- label:  "dark_disabled"
+  hex:    "#b8b8b8"
+  rgba:   "rgba(0,0,0,.3)"
+
+- label:  "dark_secondary"
+  hex:    "#757575"
+  rgba:   "rgba(0,0,0,.5)"
+
+- label:  "dark_primary"
+  hex:    "#212121"
+  rgba:   "rgba(0,0,0,.9)"   
+
+- label:  "dark_full"
+  hex:    "#000000"
+  rgba:   "rgba(0,0,0,1)"
+
+
+
+greyscale_dark:
+- label:  "light_field"
+  hex:    "#1c1c1c"
+  rgba:   "rgba(255,255,255,.1)"
+
+- label:  "light_layout"
+  hex:    "#2e2e2e"
+  rgba:   "rgba(255,255,255,.2)"
+
+- label:  "light_disabled"
+  hex:   "#5c5c5c"
+  rgba:  "rgba(255,255,255,.4)"
+
+- label:  "light_secondary"
+  hex:   "#999999"
+  rgba:  "rgba(255,255,255,.6)"
+
+- label:  "light_primary"
+  hex:    "#e6e6e6"
+  rgba:   "rgba(255,255,255,.9)"
+
+- label:  "light_full"
+  hex:    "#ffffff"
+  rgba:   "rgba(255,255,255,1)"
+
+
+
+
+main_colors:
+- label:  "primary_dark"
+  hex:    "#247ad6"
+  rgba:   "rgba(36,122,214,1)"
+
+- label:  "primary_bright"
+  hex:    "#55c7e1"
+  rgba:   "rgba(85,199,225,1)"
+
+- label:  "secondary_dark"
+  hex:    "#22c76a"
+  rgba:   "rgba(34,199,106,1)"
+
+- label:  "secondary_bright"
+  hex:    "#24d683"
+  rgba:   "rgba(36,214,131,1)"
+
+
+
+
+status_colors:
+- label:  "info"
+  hex:    "#999999"
+  rgba:   "rgba(153,153,153,1)"
+
+- label:  "success"
+  hex:    "#5dc95b"
+  rgba:   "rgba(93,201,91,1)"
+
+- label:  "warning"
+  hex:    "#fec979"
+  rgba:   "rgba(254,201,121,1)"
+
+- label:  "error"
+  hex:    "#f15645"
+  rgba:   "rgba(241,86,69,1)"
+
+
+
+
+ui_colors:
+- label:  "ui_yellow"
+  hex:    "#ffe74c"
+  rgba:   "rgba(255,231,76,1)"
+
+- label:  "ui_orange"
+  hex:    "#f38d68"
+  rgba:   "rgba(243,141,104)"
+
+- label:  "ui_red"
+  hex:    "#ff5964"
+  rgba:   "rgba(255,89,100)"
+
+- label:  "ui_purple"
+  hex:    "#574d68"
+  rgba:   "rgba(87,77,104)"

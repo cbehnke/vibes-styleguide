@@ -105,11 +105,13 @@ p > span.code {
 // 2 column boxes
 .boxes {
   display: flex;
-  margin: -20px;
+  flex-flow: row wrap;
+  @include rem( margin, -2rem );
+  @include rem( margin-bottom, 6rem );
 
   div.box { 
     display: block;
-    flex: 1;
+    flex-basis: 43%;
     @include rem( margin, 2rem );
   }
 
