@@ -45,7 +45,10 @@ a:visited
  * Section Styles
  * ------------------------------------------------------------------------ */
 
-// Header
+ /*
+ * Header
+ */
+
 div.page > header {
   background-color: $secondary-deep;
   background-image: image-url( 'fractal-pattern.png' );
@@ -62,10 +65,34 @@ div.page > header {
 @include max-screen(768px) { div.section > header { padding: 48px 40px; } }
 
 
-// Content
-@include max-screen(768px) {  div.content { margin: 40px; } }
+
+/*
+* Content
+*/
+
+@include max-screen(768px) { div.content { margin: 40px; } }
 
 h3 { color: $secondary-bright; }
+
+.box {
+  display: flex;
+  align-items: center;
+  border: 1px solid $dark-layout;
+
+  @include rem( margin, 0 );
+  @include rem( padding, 2rem );
+}
+
+.caption {
+  @extend .text-small;
+
+  display: block;
+  color: $dark-disabled;
+  font-style: italic;
+
+  @include rem( letter-spacing, 0.16rem );
+  @include rem( margin, .5rem );
+}
 
 p > span.code {
   color: $secondary-deep;
@@ -74,30 +101,57 @@ p > span.code {
   @include rem( padding, .2rem );
 }
 
-.box {
-  display: flex;
-  align-items: center;
-  border: 1px solid $dark-layout;
-  padding: 20px;
 
-  >.col {
-    flex-grow: 1;
-    flex-flow: row wrap;
-    justify-content: space-between;
+// 2 column boxes
+.boxes {
+  display: flex;
+  margin: -20px;
+
+  div.box { 
+    display: block;
+    flex: 1;
+    @include rem( margin, 2rem );
+  }
+
+  span.caption {
+    @include rem( margin-left, 0 );
+    @include rem( margin-bottom, 0 );
   }
 }
 
-.caption {
-  @extend .text-small;
-
-  display: block;
-  text-align: right;
-  color: $dark-disabled;
-  font-style: italic;
-
-  @include rem( letter-spacing, 0.16rem );
-  @include rem( margin, .5rem .5rem 6rem 0 );
+// 1 Box with multiple items
+.box > .col {
+  flex-grow: 1;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
+
+.box ~ .caption {
+  text-align: right;
+  margin-right: 0;
+  @include rem( margin-right, 0 );
+  @include rem( margin-bottom, 6rem );
+}
+
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Sidebar
+ * ------------------------------------------------------------------------ */
+
+[off-canvas] {
+  background-color: white;
+  border-right: 1px solid $dark-layout;
+
+> nav > li {
+  &.active { border-left: 5px solid $secondary-bright; }
+
+  >a { display: block; @extend .label; text-decoration: none; }
+}
+} // Sidebar
+
 
 
 
@@ -118,16 +172,12 @@ p > span.code {
 
 
 /* ------------------------------------------------------------------------ *
- * Sidebar
+ * Colors
  * ------------------------------------------------------------------------ */
 
-[off-canvas] {
-  background-color: white;
-  border-right: 1px solid $dark-layout;
-
-> nav > li {
-  &.active { border-left: 5px solid $secondary-bright; }
-
-  >a { display: block; @extend .label; text-decoration: none; }
+.swatch {
+  display: block;
+  width: 100%;
+  height: 64px;
+  background: black;
 }
-} // Sidebar
