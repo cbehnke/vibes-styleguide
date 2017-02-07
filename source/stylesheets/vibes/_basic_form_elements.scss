@@ -4,15 +4,16 @@
 
 .input-container {
 width: $inputContainer;
-margin: 2rem 0;
+position: relative;
+@include rem( margin, 2rem 0 );
 
 // Label
->label { padding: 0.5rem; }
+>label { @include rem( padding, .5rem ); }
 
 // Footer Elements
 >.input-footer {
   @include clearfix;
-  padding: 0.5rem;
+  @include rem( padding, .5rem );
 
   >.input-info,
   >.tags-link
@@ -58,7 +59,7 @@ input[type="text"] {
   border-bottom-color: $dark-layout;
   outline: none;  
 
-  padding: 0.5rem;
+  @include rem( padding, .5rem );
 
   &:focus { border-bottom-color: $secondary-bright; border-bottom-width: 3px; }
   @include placeholder { color: $dark-disabled; }
@@ -105,6 +106,7 @@ textarea {
 /**
 * Error State
 */
+
 .input-container.error {
   input[type="text"],
   textarea
@@ -125,6 +127,7 @@ textarea {
 /**
 * Disabled
 */
+
 .input-container.disabled {
   input[type="text"],
   textarea
@@ -139,4 +142,21 @@ textarea {
   .input-info,
   .tags-link
   { display: none; }
+}
+
+
+/**
+* Inline Icon
+*/
+
+.input-container.input-text.with-icon {
+  > i > svg { width: 14px; height: 14px; fill: black; }
+
+  // icon before input
+  > i { position: absolute; @include rem( top, 3.2rem ); @include rem( left, .5rem ); }
+  > i + input[type="text"] { @include rem( padding-left, 2.4rem ); @include rem( padding-right, .5rem ); }
+
+  // icon after input
+  > input[type="text"] + i { @include rem( right, .5rem ); @include rem( left, auto ); }
+  input[type="text"] { @include rem( padding-right, 2.4rem ); }
 }

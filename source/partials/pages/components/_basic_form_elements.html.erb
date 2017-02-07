@@ -7,12 +7,12 @@
   <div class="separator">
     <div id="input-1" class="input-container input-text">
       <label for="input-1">
-        Input Label
+        Link to
         <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
       </label>
-      <input type="text" id="input-1" name="input-1" placeholder="Placeholder" />
+      <input type="text" id="input-1" name="input-1" placeholder="Placeholder" value="Save this offer to your phone" />
       <div class="input-footer">
-        <span class="input-info text-small"></span>
+        <span class="input-info text-small">help/reference text</span>
         <span class="tags-link">+ Insert Tags &amp; Content</span>
       </div>
     </div>
@@ -56,6 +56,40 @@
     </div>
   </div>
   <span class="caption">disabled field</span>
+
+
+  <h3>Field With Icon</h3>
+  <p>Special functionality fields such as search fields or datepickers can be indicated with an icon. The icon can be on the left or the right.</p>
+
+  <div class="separator">
+    <div id="input-1" class="input-container input-text with-icon">
+      <label for="input-1">
+        Search
+      </label>
+      <i class="icon-search"></i>
+      <input type="text" id="input-1" name="input-1" placeholder="http://google.com" value="" />
+      <div class="input-footer">
+        <span class="input-info text-small"></span>
+        <span class="tags-link"></span>
+      </div>
+    </div>
+  </div>
+  <span class="caption">input with left-handed icon</span>
+
+  <div class="separator">
+    <div id="input-1" class="input-container input-text with-icon">
+      <label for="input-1">
+        Select a date
+      </label>
+      <input type="text" id="input-1" name="input-1" placeholder="January 1, 2018" value="" />
+      <i class="icon-date"></i>
+      <div class="input-footer">
+        <span class="input-info text-small"></span>
+        <span class="tags-link"></span>
+      </div>
+    </div>
+  </div>
+  <span class="caption">input with right-handed icon</span>
 
 
   <h3>Multi-line Inputs</h3>
