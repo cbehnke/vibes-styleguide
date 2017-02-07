@@ -121,6 +121,8 @@ textarea {
   .input-info           { color: $error; }
 
   .tags-link { display: none; }
+
+  textarea { border-color: $error; }
 }
 
 
