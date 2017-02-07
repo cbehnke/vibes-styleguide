@@ -201,8 +201,8 @@ p > span.code {
 }
 
 
-.box:nth-child(1),
-.box:nth-child(2)
+.box:nth-of-type(1),
+.box:nth-of-type(2)
 {
   @extend p;
   @include rem( letter-spacing, 1rem );
