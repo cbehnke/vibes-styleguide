@@ -128,12 +128,31 @@ p > span.code {
   justify-content: space-between;
 }
 
-.box ~ .caption {
+.box ~ .caption,
+.separator ~ .caption
+{
   text-align: right;
   margin-right: 0;
   @include rem( margin-right, 0 );
   @include rem( margin-bottom, 6rem );
 }
+
+// Separators
+.separator {
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 96%;
+
+    @include rem( margin, 0 auto );
+    @include background-image(linear-gradient(90deg, $light-full 0%, $dark-layout 25%, $dark-layout 75%, $light-full 100%));
+  }
+
+  >div { @include rem( margin, 2rem 0 ); }
+}
+
 
 
 

@@ -22,7 +22,7 @@
     <div off-canvas="slidebar-1 left reveal">
       <nav class="slats">
         <% for resource in sitemap.resources.sort_by {|resource| resource.data.id.to_i   } %>
-          <% if resource.ext == '.html' && resource.path != 'index.html' %>
+          <% if resource.ext == '.html' && resource.path != 'index.html' && resource.path != 'foundations.html' && resource.path != 'patterns.html' %>
             <li class='slat <%= check_current_path(resource.path) %>'><%= link_to resource.data.title, "/#{resource.destination_path}" %></li>
           <% end %>
         <% end %>

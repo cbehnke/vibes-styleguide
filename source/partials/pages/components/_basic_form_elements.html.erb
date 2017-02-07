@@ -1,26 +1,78 @@
 <section id="basic-form-elements">
-  <h3>Inputs</h3>
-  <div id="input-1" class="input-container input-text">
-    <label for="input-1">
-      Input Label
-      <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
-    </label>
-    <input type="text" id="input-1" name="input-1" placeholder="Placeholder" />
-    <div class="input-footer">
-      <span class="input-info text-small"></span>
-      <span class="tags-link">Tags &amp; Content</span>
-    </div>
-  </div>
+  <h2>Basic Form Elements</h2>
 
-  <div id="input-2" class="input-container input-textarea">
-    <label for="input-1">
-      Input Label
-      <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
-    </label>
-    <textarea id="input-2" name="input-2" rows="4" placeholder="Enter your message here"></textarea>
-    <div class="input-footer">
-      <span class="input-info text-small"></span>
-      <span class="tags-link">Tags &amp; Content</span>
+  <h3>Inputs</h3>
+  <p>Observe this text input field with all of the elements included.</p>
+
+  <div class="separator">
+    <div id="input-1" class="input-container input-text">
+      <label for="input-1">
+        Input Label
+        <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+      </label>
+      <input type="text" id="input-1" name="input-1" placeholder="Placeholder" />
+      <div class="input-footer">
+        <span class="input-info text-small"></span>
+        <span class="tags-link">+ Insert Tags &amp; Content</span>
+      </div>
     </div>
   </div>
+  <span class="caption">basic input</span>
+
+
+  <h3>Field With Validation</h3>
+  <p>Inline error validation calls attention to the offending fields and provides feedback on issues with the field. The error message appears as the help text below the form, replacing any existing inline help copy.</p>
+
+  <div class="separator">
+    <div id="input-1" class="input-container input-text error">
+      <label for="input-1">
+        Input Label
+        <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+      </label>
+      <input type="text" id="input-1" name="input-1" placeholder="Placeholder" value="google" />
+      <div class="input-footer">
+        <span class="input-info text-small">not a valid URL</span>
+        <span class="tags-link">+ Insert Tags &amp; Content</span>
+      </div>
+    </div>
+  </div>
+  <span class="caption">input with error validation</span>
+
+
+  <h3>Disabled Field</h3>
+  <p>Disabled fields grey out all of the elements and remove all optional content such as help text and actions, as well as the placeholder.</p>
+
+  <div class="separator">
+    <div id="input-1" class="input-container input-text disabled">
+      <label for="input-1">
+        Input Label
+        <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+      </label>
+      <input type="text" id="input-1" name="input-1" placeholder="Placeholder" disabled="disabled" />
+      <div class="input-footer">
+        <span class="input-info text-small"></span>
+        <span class="tags-link">+ Insert Tags &amp; Content</span>
+      </div>
+    </div>
+  </div>
+  <span class="caption">disabled field</span>
+
+
+  <h3>Multi-line Inputs</h3>
+  <p>Textareas are contained within a box to indicate that they accept larger text values. The input box will grow as the user types more into the box.</p>
+
+  <div class="separator">
+    <div id="input-2" class="input-container input-textarea">
+      <label for="input-1">
+        Input Label
+        <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
+      </label>
+      <textarea id="input-2" name="input-2" rows="4" placeholder="Enter your message here"></textarea>
+      <div class="input-footer">
+        <span class="input-info text-small"></span>
+        <span class="tags-link">+ Insert Tags &amp; Content</span>
+      </div>
+    </div>
+  </div>
+  <span class="caption">basic multi-line input</span>
 </section>

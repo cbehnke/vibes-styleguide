@@ -1,4 +1,3 @@
-// loadSvg($('.icon-menu'),'menu');
 injectIcons();
 
 function injectIcons() {

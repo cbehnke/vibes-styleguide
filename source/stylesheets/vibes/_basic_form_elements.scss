@@ -20,7 +20,7 @@ margin: 2rem 0;
 }
 
 .input-footer > .input-info { float: left; width: 45%; }
-.input-footer > .tags-link  { float: right; width: 45%; }
+.input-footer > .tags-link  { float: right; width: 50%; }
 
 .input-info {
   float: left;
@@ -32,8 +32,10 @@ margin: 2rem 0;
   float: right;
   text-align: right;
   font-weight: 600;
-  color: $primary-deep;
+  color: $secondary-bright;
   cursor: pointer;
+
+  @include rem( line-height, 1.6rem );
 }
 
 } // .input-container
@@ -77,11 +79,10 @@ textarea {
 
   width: 100%;
 
-  border: 0.5px solid rgba(0,0,0,0);
-  border-bottom-color: $dark-layout;
+  border: 0.5px solid $dark-layout;
   outline: none;
 
-  padding: 0.5rem;
+  @include rem( padding, .5rem );
 
   resize: none;
   
@@ -108,13 +109,34 @@ textarea {
   input[type="text"],
   textarea
   { 
+    color: $error;
     border-bottom-color: $error;
     @include placeholder { color: transparent; }
   }
 
-  >label { color: $error; }
-  >label > span > svg { fill: $error; }
+  >label,               { color: $error; }
+  >label > span > svg   { fill: $error; }
+  .input-info           { color: $error; }
+
+  .tags-link { display: none; }
+}
 
 
-  .input-info,.tags-link { display: none; }
+/**
+* Disabled
+*/
+.input-container.disabled {
+  input[type="text"],
+  textarea
+  {
+    border-bottom-color: $dark-layout;
+    @include placeholder { color: transparent; }
+  }
+
+  >label,               { color: $dark-disabled; }
+  >label > span > svg   { display: none; }
+
+  .input-info,
+  .tags-link
+  { display: none; }
 }
