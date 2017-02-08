@@ -152,7 +152,7 @@ textarea {
 */
 
 .input-container.input-text.with-icon {
-  > i > svg { width: 14px; height: 14px; fill: black; }
+  > i > svg { width: 16px; height: 16px; fill: black; }
 
   // icon before input
   > i { position: absolute; @include rem( top, 3.2rem ); @include rem( left, .5rem ); }
@@ -161,4 +161,12 @@ textarea {
   // icon after input
   > input[type="text"] + i { @include rem( right, .5rem ); @include rem( left, auto ); }
   input[type="text"] { @include rem( padding-right, 2.4rem ); }
+}
+
+
+/**
+* Dropdowns
+**/
+
+.input-conatiner.input-dropdown-basic {
 }
