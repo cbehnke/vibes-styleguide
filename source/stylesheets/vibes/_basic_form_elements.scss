@@ -61,6 +61,7 @@ input[type="text"] {
 
   @include rem( padding, .5rem );
 
+  &:hover { border-bottom-color: $dark-disabled; }
   &:focus { border-bottom-color: $secondary-bright; border-bottom-width: 3px; }
   @include placeholder { color: $dark-disabled; }
   @include transition( border-width .1s linear );
@@ -87,6 +88,7 @@ textarea {
 
   resize: none;
   
+  &:hover { border-color: $dark-disabled; }
   &:focus {
     border-style: solid;
 
@@ -135,6 +137,7 @@ textarea {
   textarea
   {
     border-bottom-color: $dark-layout;
+    &:hover { border-bottom-color: $dark-layout; }
     @include placeholder { color: transparent; }
   }
 

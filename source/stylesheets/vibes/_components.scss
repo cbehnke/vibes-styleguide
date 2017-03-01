@@ -181,7 +181,7 @@ ul.selector.menu {}
 
   span.icon-right { margin: 0.3rem; }
 
-  &:hover { background: $dark-field; }
+  &:hover { background: darken( white,8% ); }
 }
 
 // Secondary Content
@@ -319,6 +319,8 @@ ul.selector.menu {}
 
   @extend .slat;
 }
+
+.select-abutted-top { border-top: .5px solid $dark-layout; }
 
 
 /**
