@@ -8,4 +8,11 @@ function resetErrorFields() {
   })
 }
 
-$(function() { resetErrorFields(); });
+function initializeSelectFields() {
+  let selectInstance = new Select( {
+    el: document.querySelector( 'select.select-target' ),
+    className: 'select-theme-default'
+  } );
+}
+
+$(function() { resetErrorFields(); initializeSelectFields(); });

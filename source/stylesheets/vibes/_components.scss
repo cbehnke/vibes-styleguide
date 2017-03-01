@@ -232,3 +232,146 @@ ul.selector.menu {}
 
   >input::placeholder { color: $dark-disabled; }
 }
+
+
+
+
+/* ------------------------------------------------------------------------ *
+ * Select Elements
+ * ------------------------------------------------------------------------ */
+
+/**
+*
+* Custom Select Elements using Tether + Select
+*
+* HTML:
+*  select
+*   option Option Value 1
+*   option Option Value 2
+*
+*/
+
+.select-select {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.select-element,
+.select-element:after,
+.select-element:before,
+.select-element *,
+.select-element *:after,
+.select-element *:before
+{ box-sizing: border-box; }
+
+.select-element {
+  position: absolute;
+  display: none; 
+  z-index: 2;
+}
+
+.select-element.select-open { display: block; }
+
+.select-theme-default,
+.select-theme-default *,
+.select-theme-default *:after,
+.select-theme-default *:before
+{ box-sizing: border-box; }
+
+
+.select.select-theme-default {
+  -webkit-user-select:  none;
+  -moz-user-select:     none;
+  -ms-user-select:      none;
+  -o-user-select:       none;
+  user-select:          none;
+}
+
+
+/**
+* Select Menu
+*/
+
+.select.select-theme-default .select-content {
+  -webkit-overflow-scrolling: touch;
+  background: #fff;
+  font-family: inherit;
+  color: inherit;
+  overflow: auto;
+  width: $inputContainer;
+  max-height: $inputContainer;
+  border-left: .5px solid $dark-layout;
+  border-right: .5px solid $dark-layout;
+}
+
+.select.select-theme-default .select-options {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+}
+
+.select.select-theme-default .select-options .select-option {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+
+  @extend .slat;
+}
+
+
+/**
+* Select Target
+*/
+
+.select-target.select-theme-default {
+  @extend .text-medium;
+
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  border: 0.5px solid rgba(0,0,0,0);
+  border-bottom-color: $dark-layout;
+  outline: none;  
+
+  @include rem( padding, .5rem );
+  @include transition( border-width .1s linear );
+}
+
+// Icon
+.select-target.select-theme-default:after {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='transparent' /><path d='M8,11.25a.25.25,0,0,1-.18-.07l-6-6a.25.25,0,0,1,.35-.35L8,10.65l5.82-5.82a.25.25,0,0,1,.35.35l-6,6A.25.25,0,0,1,8,11.25Z'/></svg>");
+  position: absolute;
+  height: 16px;
+  width: 16px;
+
+  @include rem( bottom, .5rem );
+  @include rem( right, .5rem );
+}
+
+// Focus
+.select-target.select-theme-default:hover,
+.select-target.select-theme-default.select-target-focused,
+.select-target.select-theme-default.select-target-focused:focus
+{ border-bottom-color: $dark-disabled; }
