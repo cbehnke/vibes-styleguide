@@ -10,10 +10,18 @@
         Value Modifier
         <span class="icon-container"><%= partial "images/svg/icon_required.svg" %></span>
       </label>
-      <select class="select-target">
-        <option>Exactly matches</option>
-        <option>Starts with</option>
-        <option>Ends with</option>
+      <select class="select-target" style="width:100%;">
+        <optgroup label="By Calendar Date">
+          <option>on Jan. 6, 2014</option>
+          <option>after Jan. 6, 2014</option>
+          <option>before Jan. 6, 2014</option>
+          <option>between Jan. 1-31, 2014</option>
+        </optgroup>
+        <optgroup label="By Anniversary">
+          <option>on Jan. 6</option>
+          <option>between Jan. 1-31</option>
+          <option>in month January</option>
+        </optgroup>
       </select>
     </div>
   </div>

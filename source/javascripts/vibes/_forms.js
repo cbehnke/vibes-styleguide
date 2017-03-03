@@ -9,10 +9,8 @@ function resetErrorFields() {
 }
 
 function initializeSelectFields() {
-  let selectInstance = new Select( {
-    el: document.querySelector( 'select.select-target' ),
-    className: 'select-theme-default'
-  } );
+  $selects = $( 'seelct.select-target' );
+  $selects.select2();
 }
 
 $(function() { resetErrorFields(); initializeSelectFields(); });
